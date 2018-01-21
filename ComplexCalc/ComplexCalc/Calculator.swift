@@ -33,4 +33,18 @@ class Calculator {
         let y = lhs["y"]! + rhs["y"]!
         return ["x": x, "y": y]
     }
+    
+    public func subtract(lhs: Int, rhs: Int) -> Int {
+        return lhs - rhs
+    }
+    
+    public func subtract(lhs: (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
+        return (lhs.0 - rhs.0, lhs.1 - rhs.1)
+    }
+    
+    public func subtract(lhs: [String: Int], rhs: [String: Int]) -> [String: Int] {
+        let x = lhs["x"]! - rhs["x"]!
+        let y = lhs["y"]! - rhs["y"]!
+        return ["x": x, "y": y]
+    }
 }
