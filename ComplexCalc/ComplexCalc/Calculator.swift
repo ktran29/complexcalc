@@ -47,4 +47,21 @@ class Calculator {
         let y = lhs["y"]! - rhs["y"]!
         return ["x": x, "y": y]
     }
+    
+    public func multiply(lhs: Int, rhs: Int) -> Int {
+        return lhs * rhs
+    }
+    
+    public func multiply(_ args:[Int]) -> Int {
+        let size = args.count - 1
+        var sum = 1
+        for num in 0...size {
+            sum *= args[num]
+        }
+        return sum
+    }
+    
+    public func divide(lhs: Int, rhs: Int) -> Int {
+        return lhs / rhs
+    }
 }
