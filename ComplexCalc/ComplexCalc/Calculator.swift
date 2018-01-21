@@ -64,4 +64,17 @@ class Calculator {
     public func divide(lhs: Int, rhs: Int) -> Int {
         return lhs / rhs
     }
+    
+    public func count(_ args:[Int]) -> Int {
+        return args.count
+    }
+    
+    public func avg(_ args:[Int]) -> Int{
+        let size = args.count
+        var sum = 0
+        for num in 0...size - 1 {
+            sum += args[num]
+        }
+        return sum / size
+    }
 }
