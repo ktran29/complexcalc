@@ -10,4 +10,27 @@ import Foundation
 
 // All your work will go in here
 class Calculator {
+    
+    public func add(lhs: Int, rhs: Int) -> Int {
+        return lhs + rhs
+    }
+    
+    public func add(_ args:[Int]) -> Int {
+        let size = args.count - 1
+        var sum = 0
+        for num in 0...size {
+            sum += args[num]
+        }
+        return sum
+    }
+    
+    public func add(lhs: (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
+        return (lhs.0 + rhs.0, lhs.1 + rhs.1)
+    }
+    
+    public func add(lhs: [String: Int], rhs: [String: Int]) -> [String: Int] {
+        let x = lhs["x"]! + rhs["x"]!
+        let y = lhs["y"]! + rhs["y"]!
+        return ["x": x, "y": y]
+    }
 }
