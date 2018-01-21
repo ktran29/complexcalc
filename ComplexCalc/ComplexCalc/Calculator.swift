@@ -77,4 +77,18 @@ class Calculator {
         }
         return sum / size
     }
+    
+    public func mathOp(lhs: Int, rhs: Int, op: (Int, Int) -> Int) -> Int {
+        return op(lhs, rhs)
+    }
+
+    public func mathOp(args:[Int], beg: Int, op: (Int, Int) -> Int) -> Int {
+        var sum = beg
+        let size = args.count - 1
+        for num in 0...size {
+            sum = op(sum, args[num])
+        }
+        return sum
+    }
+    
 }
